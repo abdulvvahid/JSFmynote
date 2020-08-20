@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:body>
+        <ui:composition>
+            <h:form>
+                <nav class="navbar bg-light navbar-light fixed-top navbar-expand-sm"> 
+                    
+                    <div class="container menu ml-auto mr-auto">
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item nav-link">
+                                <h:commandLink action="/secured/securedPage?faces-redirect=true" value="Profil" class="nav-bar"/>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <h:commandLink action="/secured/notEkle?faces-redirect=true" value="Not Ekle"/>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <h:commandLink action="/secured/notDuzenle?faces-redirect=true" value="Not Düzenle"/>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <h:commandLink action="/logout?faces-redirect=true" value="Cıkıs" class="nav-brand"/>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                </nav>
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>
+

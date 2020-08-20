@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:body>
+        <ui:composition>
+            <h:form>
+                <nav class="navbar bg-light text-light navbar-light fixed-top navbar-expand-sm"> 
+                    
+                    <div class="container menu ml-auto mr-auto">
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item nav-link">
+                                <h:commandLink action="/index?faces-redirect=true" value="MyNote" class="nav-bar"/>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <h:commandLink action="/login?faces-redirect=true" value="Giris" class="nav-brand"/>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                </nav>
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>
+

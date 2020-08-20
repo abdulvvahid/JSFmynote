@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+    </h:head>
+    <h:body>
+        
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="title">Kayıt Ol</ui:define>
+            
+            <ui:define name="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 offset-4 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 200px !important ;">
+                            <p> Kayıt Ol </p>
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <p>Kullanıcı adı</p>
+                                    <h:inputText value="#{register.kadi}"/>
+                                    <p>Şifre</p>
+                                    <h:inputSecret value="#{register.ksifre}"/>
+                                    <h:commandButton class="btn btn-success" action="#{register.kayit()}" value="Kayıt Ol"/>
+                                </h:panelGrid>
+                            </h:form>
+                        </div>
+                    </div>                
+                </div>
+                
+                
+            </ui:define>
+            
+        </ui:composition>
+	
+    </h:body>
+</html>
+

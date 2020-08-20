@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+    </h:head>
+    <h:body>
+        <ui:composition template="/secured/securedTemplate/template.xhtml">
+            <ui:define name="title">Not Düzenle</ui:define>
+            
+            <ui:define name="content">
+                <h:form>
+                    <h:outputText value="Hoşgeldiniz  "/>
+                    <h:outputText value="#{loginController.user.username}"/>
+                    <hr/>
+                    <h:dataTable class="table table-bordered" value="#{notList.select()}" var="nott">
+
+                        <h:column>
+                            <f:facet name="header">Not ID</f:facet>
+                            <h:outputText value="#{nott.not_id}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Not Adı</f:facet>
+                            <h:outputText value="#{nott.not_name}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Not Tarihi</f:facet>
+                            <h:outputText value="#{nott.not_date}">
+                                <f:convertDateTime pattern="dd.MM.yyyy HH:mm" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Not</f:facet>
+                            <h:outputText value="#{nott.not_not}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sil</f:facet>
+                            <h:commandButton value="Sil" action="#{notSil.Sil(nott)}"/>
+                        </h:column>
+
+                    </h:dataTable>
+                </h:form> 
+            </ui:define>
+            
+        </ui:composition>
+    </h:body>
+</html>
+
